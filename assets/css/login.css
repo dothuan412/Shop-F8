@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://img.lovepik.com/photo/50070/2904.jpg_wh860.jpg);
+}
+
+.form-login {
+    display: block;
+    background-color: rgb(190, 83, 137);
+    border-radius: 10px;
+    opacity: 0.8;
+    width: 25%;
+    padding: 5em 0.5em;
+}
+
+.form-login h1 {
+    margin-bottom: 70px;
+    color: #fcb50e;
+    font-family: Snippet;
+    margin-top: 40px;
+}
+.form-login h3{
+    color: rgb(245, 181, 6);
+}
+
+.form-login button {
+    height: 55px;
+    width: 50%;
+    margin-bottom: 30px;
+    background-color: rgb(60, 102, 104);
+    border-radius: 50px;
+    color: rgb(245, 181, 6);
+    background-image: black;
+}
+
+.form-text {
+    margin-bottom: 40px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-text input {
+    width: -webkit-fill-available;
+    border: none;
+    padding: 1em;
+    border-bottom: 2px solid #ccc;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 2em;
+}
+
+.form-text label {
+    position: absolute;
+    left: 12%;
+    bottom: 32%;
+    transition: 0.5s;
+}
+
+.form-text label.focus {
+    transform: translateY(-45px);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="Viewport" content="width=device-width">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/signup.css">
+</head>
+<body background="">
+	<div class="container">
+		<form class="form-login">
+			<h1> ĐĂNG KÝ</h1>
+			<div class="form-text">
+				<label>E-mail</label>
+				<input type="text">
+			</div>
+			<div class="form-text">
+				<label>Password</label>
+				<input type="Password">
+			</div>
+			<div class="form-text">
+				<label>Name</label>
+				<input type="Email">
+			</div>
+			<div class="form-text">
+				<label>Phone Number</label>
+				<input type="SĐT">
+			</div>
+			<button>Sign Up</button>
+			<div>
+			<span style="color: rgb(248, 204, 6);">You login <a href="login.html">here</a></span>
+			</div>
+			
+			
+		</form>
+		
+	</div>
+	<script type="text/javascript">
+		const formLogin = document.querySelectorAll('.form-text input')
+		const formLabel = document.querySelectorAll('.form-text label')
+		for(let i=0; i<4;i++){
+			formLogin[i].addEventListener("mouseover",function(){ 
+				formLabel[i].classList.add("focus")	
+			})
+			formLogin[i].addEventListener("mouseout",function(){ 
+				if (formLogin[i].value=="") {
+				formLabel[i].classList.remove("focus")	
+			}
+			})
+		}
+	</script>
+</body>
+</html>

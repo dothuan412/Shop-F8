@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="Viewport" content="width=device-width">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/login.css">
+</head>
+<body background="">
+	<div class="container">
+		<form class="form-login" onsubmit="return validate();">
+			<h1>ĐĂNG NHẬP</h1>
+			<div class="form-text">
+				<label>E-mail</label>
+				<input type="text" name="username" id="username">
+			</div>
+			<div class="form-text">
+				<label>Passwork</label>
+				<input type="Password" name="Password" id="Password">
+			</div>
+			<button><a href="#"><h3>Log-In</h3></a></button>
+			<div>
+			<span style="color: rgb(248, 204, 6);">Bạn chưa có tài khoản? Đăng ký<a href="signup.html"> tại đây.</a></span>
+			</div>
+		</form>
+		
+	</div>
+	<script type="text/javascript">
+		const formLogin = document.querySelectorAll('.form-text input')
+		const formLabel = document.querySelectorAll('.form-text label')
+		for(let i=0; i<2;i++){
+			formLogin[i].addEventListener("mouseover",function(){ 
+				formLabel[i].classList.add("focus")	
+			})
+			formLogin[i].addEventListener("mouseout",function(){ 
+				if (formLogin[i].value=="") {
+				formLabel[i].classList.remove("focus")	
+			}
+			})
+		}
+		
+		function validate( ) {
+			var usename = document.getElementById("username").value;
+			var password = document.getElementById("Password").value;
+			if (username == null || username == "" || password == null || password == "") {
+                alert("Vui lòng nhập tên đăng nhập hoặc mật khẩu");
+                return false;
+            } else if (password.length < 8) {
+                alert("Mật khẩu phải dài hơn 8 ký tự");
+                return false;
+            }
+			return true;
+        }
+	</script>
+</body>
+</html>
